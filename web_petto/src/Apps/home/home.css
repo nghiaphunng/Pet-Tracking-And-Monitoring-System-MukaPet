@@ -1,0 +1,175 @@
+/* src/components/Banner.css */
+
+.home {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Banner Styles */
+  .banner {
+    position: relative;
+    background-image: url("https://images.unsplash.com/photo-1510563800743-aed236490d08?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGFuaW1hbCUyMGRvZyUyMHdpdGglMjBmYW1pbHl8ZW58MHx8MHx8fDA%3D"); /* Đường dẫn ảnh nền */
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .banner-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.6); /* Nền đen mờ */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .banner-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  
+  .banner-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    background-color: #ff7e67;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #ff6245;
+  }
+  
+  /* Features Section */
+  .features {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .features h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .feature-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 220px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .feature-item p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .banner-content h1 {
+      font-size: 2rem;
+    }
+  
+    .banner-content p {
+      font-size: 1rem;
+    }
+  
+    .feature-item {
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .banner-content h1 {
+      font-size: 1.8rem;
+    }
+  
+    .banner-content p {
+      font-size: 0.9rem;
+    }
+  
+    .cta-button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  }
+
+  /* phần footer */
+  .footer {
+    background-color: #00bcd4;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-info {
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  .footer-info a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .footer-info a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+  }
+  
+  .social-icon img:hover {
+    transform: scale(1.1);
+  }
+  

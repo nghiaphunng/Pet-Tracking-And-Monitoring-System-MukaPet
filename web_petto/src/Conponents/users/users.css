@@ -1,0 +1,59 @@
+/* Kiểu dáng cho phần chứa thông tin người dùng */
+.users {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+}
+
+/* Căn chỉnh nội dung trong menu */
+.users_content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Phong cách cho phần "Thông tin cá nhân" */
+.users_description {
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.users_description:hover {
+    background-color: #f5f5f5;
+}
+
+
+/* Phong cách cho phần "Đăng xuất" */
+.user_logout {
+    padding: 0.8rem;
+    font-size: 1rem;
+}
+
+.user_logout a {
+    color: #ff4d4f;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.user_logout a:hover {
+    color: #d9363e;
+}
+
+/* Nút biểu tượng người dùng */
+.ant-btn-text {
+    color: #555;
+    font-size: 1.2rem;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.ant-btn-text:hover {
+    color: #1890ff;
+}
+.icon_users {
+    font-size: 24px;
+    cursor: pointer;
+}

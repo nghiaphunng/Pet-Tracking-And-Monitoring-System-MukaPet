@@ -1,0 +1,48 @@
+.header{
+    border: 1px solid #ddd;
+    display: flex;
+}
+.header__logo{
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    transition: all 0.2s;
+}
+.header__logo-collaps {
+    width: 80px;
+    transition: all 0.2s;
+}
+.header__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    flex: 1;
+}
+.header__nav-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    margin-left: 20px;
+   
+}
+.header__nav-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 24px;
+    margin-right: 20px;
+}
+/* code phân sider ở đây */
+
+.footer{
+    background: orange;
+    font-size: 24px;
+    text-align: center;
+    color: #000;
+    margin-top: 80px;
+}

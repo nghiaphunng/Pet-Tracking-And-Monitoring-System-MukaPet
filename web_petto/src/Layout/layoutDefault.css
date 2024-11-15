@@ -1,0 +1,40 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__left{
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        font-size: 24px ;
+        gap:20px;
+}
+.header__left li a.active{
+    padding-bottom:2px;
+    border-bottom: 2px solid rgba(184, 124, 12, 0.685);
+}
+.header__right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+}
+.header__right .login,
+.header__right .register {
+    cursor: pointer;
+    color: #000;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    background: #4CAF50;
+}
+
+.header__right .login:hover,
+.header__right .register:hover {
+     color: #555;
+     background-color: #4caf63a4;
+}
