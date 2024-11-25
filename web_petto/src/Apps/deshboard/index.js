@@ -48,6 +48,7 @@ function DeshBoard() {
             }
         };
         fetchApi();
+        console.log(dataAnimal);
     }, [reloat, editProduct]);
 
     return (
@@ -62,7 +63,7 @@ function DeshBoard() {
                         onMouseEnter={() => setHoveredId(item.id)}
                         onMouseLeave={() => setHoveredId(null)}
                     >
-                        <img src={item.petPicture = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNSmGTgMGh5af0IMT_UDcKxWu7sDn-P-iOlg&s"} alt={item.petName} /> {/* Đổi thành petPicture và petName */}
+                        <img src={item.petPicture} alt={item.petName} /> {/* Đổi thành petPicture và petName */}
                         <div className="animal_title">{item.petName}</div>
                         {hoveredId === item.id && (
                             <div className="animal-overlay">

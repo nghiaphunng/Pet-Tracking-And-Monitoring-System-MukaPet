@@ -5,7 +5,10 @@ import { EyeInvisibleOutlined, EyeOutlined } from "@ant-design/icons";
 
 function Note() {
     const [dataAlert, setDataAlert] = useState([]);
-
+    const [reload,setReload] = useState(false);
+    const handleReload = () => {
+        setReload(!reload);
+    }
     useEffect(() => {
         const fetchApi = async () => {
             const token = getCookie("accessToken");
@@ -47,19 +50,27 @@ function Note() {
             if (!response.ok) {
                 throw new Error("Failed to update alert status");
             }
-
+    
             const result = await response.json();
-
-            // Update the state to reflect the new status
-            setDataAlert((prevData) =>
-                prevData.map((alert) =>
-                    alert.id === alertId ? { ...alert, status: result.data.status } : alert
-                )
-            );
+    
+            // Cập nhật danh sách và đẩy thông báo xuống cuối
+            setDataAlert((prevData) => {
+                // Tìm thông báo cần cập nhật
+                const updatedAlert = prevData.find((alert) => alert.id === alertId);
+                if (!updatedAlert) return prevData;
+    
+                // Cập nhật trạng thái thông báo
+                updatedAlert.status = result.data.status;
+    
+                // Lọc danh sách để loại bỏ thông báo đã cập nhật và thêm nó vào cuối
+                const filteredData = prevData.filter((alert) => alert.id !== alertId);
+                return [...filteredData, updatedAlert];
+            });
         } catch (error) {
             console.error("Error updating alert status:", error);
         }
     };
+    
 
     const columns = [
         {
@@ -138,7 +149,7 @@ function Note() {
     return (
         <>
             <h2>Cảnh báo cho các con vật</h2>
-            <Table dataSource={dataAlert} columns={columns} rowKey="id" />;
+            <Table dataSource={dataAlert} columns={columns} rowKey="id" onReload={handleReload}/>;
         </>
     );
 }

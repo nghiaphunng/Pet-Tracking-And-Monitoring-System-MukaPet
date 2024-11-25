@@ -55,7 +55,7 @@ function DetailAnimal() {
                     <Col xxl={6} xl={6} lg={6} md={9} sm={9} xs={9}>
                         <div className="detail_image">
                             <img
-                                src={detailAnimal.petPicture = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNSmGTgMGh5af0IMT_UDcKxWu7sDn-P-iOlg&s"}
+                                src={detailAnimal.petPicture}
                                 alt={detailAnimal.petName}
                             />
                         </div>

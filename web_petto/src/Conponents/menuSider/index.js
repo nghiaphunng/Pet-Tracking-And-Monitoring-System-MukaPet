@@ -1,5 +1,5 @@
 import { Menu } from "antd";
-import {AppstoreOutlined, MailOutlined, SettingOutlined} from "@ant-design/icons";
+import {AppstoreOutlined, MailOutlined, SettingOutlined,ShoppingCartOutlined,GlobalOutlined} from "@ant-design/icons";
 import { NavLink } from "react-router-dom";
 
 function MenuSider(){
@@ -32,8 +32,13 @@ function MenuSider(){
         },
         {
             key:"MiniShop",
-            label:"MiniShop",
-            icon:<AppstoreOutlined />,
+            label:<NavLink to="/minishop">MiniShop</NavLink>,
+            icon:<ShoppingCartOutlined />,
+        },
+        {
+            key:"Blog",
+            label:<NavLink to="/blog">Blog</NavLink>,
+            icon:<GlobalOutlined />,
         }
     ]
     return (

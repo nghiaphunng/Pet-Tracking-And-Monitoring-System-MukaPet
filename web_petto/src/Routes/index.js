@@ -12,6 +12,8 @@ import Note from "../Apps/note";
 import DetailAnimal from "../Apps/deshboard/detailAnimal";
 import Contact from "../Apps/contact";
 import Introduce from "../Apps/introduce";
+import Blog from "../Apps/blog";
+import MiniShop from "../Apps/minishop";
 export const Routes = [
     //public
     {
@@ -71,6 +73,14 @@ export const Routes = [
                     {
                         path:"/detailAnimal",
                         element:<DetailAnimal />
+                    },
+                    {
+                        path:"/blog",
+                        element:<Blog />
+                    },
+                    {
+                        path:"/minishop",
+                        element:<MiniShop/>
                     }
                 ]
             }

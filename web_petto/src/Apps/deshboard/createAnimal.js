@@ -14,12 +14,29 @@ function CreateAnimal(props) {
         species: "",
         breed: "",
         age: "",
-        weight: ""
+        weight: "",
     });
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
         const token = getCookie("accessToken");
+
+        // add by nghia
+        const formData= new FormData();
+        Object.keys(data).forEach((key)=>{
+            formData.append(key,data[key]);
+        });
+        const fileInput = document.getElementById("petPicture");
+        if(fileInput.files[0]){
+            formData.append("petPicture",fileInput.files[0]);
+        }
+        else{
+            console.warn("No file selector for picture")
+        }
+
+
+
+
         fetch(`http://localhost:8087/myhome/pet/add`, {
             method: "POST",
             headers: { 
@@ -95,13 +112,19 @@ function CreateAnimal(props) {
                             <tr>
                                 <td>Tuổi</td>
                                 <td>
-                                    <input type="text" name="age"  onChange={handleChange} />
+                                    <input type="number" name="age"  onChange={handleChange} />
                                 </td>
                             </tr>
                             <tr>
                                 <td>Cân nặng</td>
                                 <td>
-                                    <input type="text" name="weight"  onChange={handleChange} />
+                                    <input type="number" name="weight"  onChange={handleChange} />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ảnh động vật</td>
+                                <td>
+                                    <input type="file" name="petPicture" id="petPicture" onChange={handleChange} />
                                 </td>
                             </tr>
                         </thead>
